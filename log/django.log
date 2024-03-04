@@ -7,3 +7,22 @@ WARNING 2024-03-04 16:01:34,897 basehttp 90607 140691735512640 "GET /docs HTTP/1
 WARNING 2024-03-04 16:01:35,135 log 90607 140691735512640 Not Found: /docs
 WARNING 2024-03-04 16:01:35,135 basehttp 90607 140691735512640 "GET /docs HTTP/1.1" 404 2412
 INFO 2024-03-04 16:02:20,073 basehttp 90607 140691735512640 "GET / HTTP/1.1" 200 367
+INFO 2024-03-04 16:11:09,547 autoreload 91377 140594763464704 Watching for file changes with StatReloader
+INFO 2024-03-04 16:11:13,382 basehttp 91377 140594713732672 "GET / HTTP/1.1" 200 367
+INFO 2024-03-04 16:12:03,106 autoreload 91377 140594763464704 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-04 16:12:03,314 autoreload 91454 140044269600768 Watching for file changes with StatReloader
+INFO 2024-03-04 16:12:16,536 autoreload 91454 140044269600768 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-04 16:12:16,760 autoreload 91469 140064802091008 Watching for file changes with StatReloader
+INFO 2024-03-04 16:14:15,867 autoreload 91469 140064802091008 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-04 16:14:16,096 autoreload 91546 140079760564224 Watching for file changes with StatReloader
+INFO 2024-03-04 16:14:18,124 basehttp 91546 140079710840384 "GET / HTTP/1.1" 200 394
+INFO 2024-03-04 16:14:45,466 autoreload 91546 140079760564224 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/urls.py changed, reloading.
+INFO 2024-03-04 16:14:45,686 autoreload 91633 140338487717888 Watching for file changes with StatReloader
+WARNING 2024-03-04 16:14:48,613 log 91633 140338437985856 Not Found: /about/
+WARNING 2024-03-04 16:14:48,613 basehttp 91633 140338437985856 "GET /about/ HTTP/1.1" 404 2424
+INFO 2024-03-04 16:14:59,951 autoreload 91633 140338487717888 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/urls.py changed, reloading.
+INFO 2024-03-04 16:15:00,182 autoreload 91653 139666471284736 Watching for file changes with StatReloader
+INFO 2024-03-04 16:15:00,824 basehttp 91653 139666422666816 "GET /about/ HTTP/1.1" 200 0
+INFO 2024-03-04 16:15:27,516 autoreload 91653 139666471284736 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-04 16:15:27,747 autoreload 91678 140212969046016 Watching for file changes with StatReloader
+INFO 2024-03-04 16:15:28,155 basehttp 91678 140212920469056 "GET /about/ HTTP/1.1" 200 597
