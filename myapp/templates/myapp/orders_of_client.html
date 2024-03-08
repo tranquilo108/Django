@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Заказы пользователя
+{% endblock %}
+
+{% block content %}
+    {% if not orders %}
+        <form action="" method="post" class="mt-3">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary" name="period" value="week">За неделю</button>
+            <button type="submit" class="btn btn-primary" name="period" value="month">За месяц</button>
+            <button type="submit" class="btn btn-primary" name="period" value="year">За год</button>
+        </form>
+
+    {% else %}
+        <form action="" method="post" class="mt-3">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary" name="period" value="week">За неделю</button>
+            <button type="submit" class="btn btn-primary" name="period" value="month">За месяц</button>
+            <button type="submit" class="btn btn-primary" name="period" value="year">За год</button>
+        </form>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Номер заказа</th>
+                    <th scope="col">Клиент</th>
+                    <th scope="col">Товары</th>
+                    <th scope="col">Общая стоимость</th>
+                    <th scope="col">Дата заказа</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.order_id }}</td>
+                        <td>{{ order.client }}</td>
+                        <td>{{ order.products }}</td>
+                        <td>{{ order.total_amount }}</td>
+                        <td>{{ order.order_date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

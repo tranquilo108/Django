@@ -9,4 +9,7 @@ class Command(BaseCommand):
         products = Product.objects.all()
         for product in products:
             self.stdout.write(
-                f'Product: {product.name}, Description: {product.description}, Price: {product.price}, Quantity: {product.quantity}')
+                f'Product: {product.name}, '
+                f'Description: {product.description}, '
+                f'Price: {product.price}, '
+                f'Quantity: {product.quantity}')

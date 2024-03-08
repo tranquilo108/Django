@@ -45,3 +45,449 @@ INFO 2024-03-06 15:01:22,694 basehttp 163877 140292064425536 "GET /about/ HTTP/1
 INFO 2024-03-06 15:02:44,861 autoreload 163877 140292114034688 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/models.py changed, reloading.
 INFO 2024-03-06 15:02:45,080 autoreload 164058 140250663641088 Watching for file changes with StatReloader
 INFO 2024-03-06 15:06:22,517 autoreload 164174 139804775841792 Watching for file changes with StatReloader
+INFO 2024-03-08 11:40:11,570 autoreload 38846 132179792482304 Watching for file changes with StatReloader
+INFO 2024-03-08 11:40:13,020 basehttp 38846 132179742856768 "GET / HTTP/1.1" 200 394
+WARNING 2024-03-08 11:40:13,089 log 38846 132179742856768 Not Found: /favicon.ico
+WARNING 2024-03-08 11:40:13,090 basehttp 38846 132179742856768 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-08 11:40:17,110 basehttp 38846 132179742856768 "GET /orders-by-client-id HTTP/1.1" 301 0
+ERROR 2024-03-08 11:40:17,143 log 38846 132179734464064 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 33, in orders_by_client_id
+    return render(request, 'myapp/orders_of_client.html')
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    raise TemplateSyntaxError(error_msg)
+django.template.exceptions.TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.html' variable.
+ERROR 2024-03-08 11:40:17,144 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 500 113914
+ERROR 2024-03-08 11:40:44,382 log 38846 132179734464064 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 33, in orders_by_client_id
+    return render(request, 'myapp/orders_of_client.html')
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-03-08 11:40:44,382 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 500 134732
+INFO 2024-03-08 11:41:06,004 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 200 190
+INFO 2024-03-08 11:42:15,993 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 200 232
+INFO 2024-03-08 11:42:16,943 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 200 232
+INFO 2024-03-08 11:42:34,844 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 200 268
+WARNING 2024-03-08 11:42:36,155 log 38846 132179734464064 Forbidden (CSRF token missing.): /orders-by-client-id/
+WARNING 2024-03-08 11:42:36,155 basehttp 38846 132179734464064 "POST /orders-by-client-id/ HTTP/1.1" 403 2547
+WARNING 2024-03-08 11:42:38,928 log 38846 132179734464064 Forbidden (CSRF token missing.): /orders-by-client-id/
+WARNING 2024-03-08 11:42:38,929 basehttp 38846 132179734464064 "POST /orders-by-client-id/ HTTP/1.1" 403 2547
+INFO 2024-03-08 11:42:59,664 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 200 394
+WARNING 2024-03-08 11:42:59,695 log 38846 132179734464064 Not Found: /favicon.ico
+WARNING 2024-03-08 11:42:59,695 basehttp 38846 132179734464064 "GET /favicon.ico HTTP/1.1" 404 2621
+WARNING 2024-03-08 11:43:00,903 log 38846 132179734464064 Forbidden (CSRF token missing.): /orders-by-client-id/
+WARNING 2024-03-08 11:43:00,903 basehttp 38846 132179734464064 "POST /orders-by-client-id/ HTTP/1.1" 403 2547
+INFO 2024-03-08 11:43:11,630 basehttp 38846 132179734464064 "GET /orders-by-client-id/ HTTP/1.1" 200 398
+WARNING 2024-03-08 11:43:11,663 log 38846 132179734464064 Not Found: /favicon.ico
+WARNING 2024-03-08 11:43:11,663 basehttp 38846 132179734464064 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-08 11:43:12,876 basehttp 38846 132179734464064 "POST /orders-by-client-id/ HTTP/1.1" 200 398
+INFO 2024-03-08 11:46:01,940 autoreload 38846 132179792482304 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:46:02,175 autoreload 39036 129474301202432 Watching for file changes with StatReloader
+INFO 2024-03-08 11:46:02,841 basehttp 39036 129474251556416 "POST /orders-by-client-id/ HTTP/1.1" 200 398
+INFO 2024-03-08 11:46:16,403 autoreload 39036 129474301202432 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:46:16,627 autoreload 39063 124376934404096 Watching for file changes with StatReloader
+INFO 2024-03-08 11:46:17,205 basehttp 39063 124376817071680 "POST /orders-by-client-id/ HTTP/1.1" 200 398
+INFO 2024-03-08 11:46:50,028 autoreload 39063 124376934404096 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:46:50,250 autoreload 39075 125968736346112 Watching for file changes with StatReloader
+INFO 2024-03-08 11:46:51,056 basehttp 39075 125968686683712 "POST /orders-by-client-id/ HTTP/1.1" 200 398
+INFO 2024-03-08 11:47:18,050 basehttp 39075 125968686683712 "POST /orders-by-client-id/ HTTP/1.1" 200 443
+INFO 2024-03-08 11:47:20,325 basehttp 39075 125968686683712 "POST /orders-by-client-id/ HTTP/1.1" 200 443
+WARNING 2024-03-08 11:47:20,361 log 39075 125968686683712 Not Found: /favicon.ico
+WARNING 2024-03-08 11:47:20,362 basehttp 39075 125968686683712 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-08 11:48:22,465 basehttp 39075 125968686683712 "POST /orders-by-client-id/ HTTP/1.1" 200 439
+WARNING 2024-03-08 11:48:22,497 log 39075 125968686683712 Not Found: /favicon.ico
+WARNING 2024-03-08 11:48:22,497 basehttp 39075 125968686683712 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-08 11:48:48,380 autoreload 39075 125968736346112 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:48:48,617 autoreload 39284 137295332818944 Watching for file changes with StatReloader
+INFO 2024-03-08 11:48:49,449 basehttp 39284 137295283099200 "POST /orders-by-client-id/ HTTP/1.1" 200 439
+INFO 2024-03-08 11:49:01,842 autoreload 39284 137295332818944 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:49:02,071 autoreload 39302 128142618611712 Watching for file changes with StatReloader
+INFO 2024-03-08 11:49:03,085 basehttp 39302 128142496757312 "POST /orders-by-client-id/ HTTP/1.1" 200 439
+INFO 2024-03-08 11:49:13,279 autoreload 39302 128142618611712 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:49:13,506 autoreload 39324 135559240269824 Watching for file changes with StatReloader
+INFO 2024-03-08 11:49:14,037 basehttp 39324 135559190554176 "POST /orders-by-client-id/ HTTP/1.1" 200 439
+INFO 2024-03-08 11:49:37,828 autoreload 39324 135559240269824 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:49:38,057 autoreload 39335 128922128957440 Watching for file changes with StatReloader
+INFO 2024-03-08 11:49:38,640 basehttp 39335 128922079233600 "POST /orders-by-client-id/ HTTP/1.1" 200 439
+INFO 2024-03-08 11:50:19,426 basehttp 39335 128922079233600 "POST /orders-by-client-id/ HTTP/1.1" 200 451
+INFO 2024-03-08 11:50:30,016 basehttp 39335 128922079233600 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 11:51:35,176 autoreload 39335 128922128957440 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:51:35,394 autoreload 39416 126238141566976 Watching for file changes with StatReloader
+INFO 2024-03-08 11:51:41,664 basehttp 39416 126238091810368 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 11:51:43,303 basehttp 39416 126238091810368 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 11:52:13,902 autoreload 39416 126238141566976 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:52:14,107 autoreload 39448 125813676978176 Watching for file changes with StatReloader
+ERROR 2024-03-08 11:52:15,013 log 39448 125813627274816 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 32, in orders_by_client_id
+    print(request.accepts())
+TypeError: HttpRequest.accepts() missing 1 required positional argument: 'media_type'
+ERROR 2024-03-08 11:52:15,013 basehttp 39448 125813627274816 "POST /orders-by-client-id/ HTTP/1.1" 500 71461
+INFO 2024-03-08 11:53:04,670 autoreload 39448 125813676978176 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:53:04,904 autoreload 39473 137173746270208 Watching for file changes with StatReloader
+ERROR 2024-03-08 11:53:06,649 log 39473 137173696575040 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 32, in orders_by_client_id
+    print(request.text)
+AttributeError: 'WSGIRequest' object has no attribute 'text'
+ERROR 2024-03-08 11:53:06,650 basehttp 39473 137173696575040 "POST /orders-by-client-id/ HTTP/1.1" 500 71401
+INFO 2024-03-08 11:53:32,300 autoreload 39473 137173746270208 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:53:32,530 autoreload 39496 136011046551552 Watching for file changes with StatReloader
+INFO 2024-03-08 11:53:34,223 basehttp 39496 136010996921920 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 11:53:36,516 basehttp 39496 136010996921920 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 11:53:50,854 autoreload 39496 136011046551552 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 11:53:51,081 autoreload 39507 125323294392320 Watching for file changes with StatReloader
+INFO 2024-03-08 11:53:52,799 basehttp 39507 125323244668480 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 11:54:10,140 basehttp 39507 125323244668480 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 12:03:47,621 autoreload 40065 135451523256320 Watching for file changes with StatReloader
+INFO 2024-03-08 12:03:49,530 basehttp 40065 135451473622592 "GET / HTTP/1.1" 200 394
+INFO 2024-03-08 12:03:54,818 basehttp 40065 135451473622592 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 12:12:24,409 autoreload 40457 134120644182016 Watching for file changes with StatReloader
+INFO 2024-03-08 12:12:26,483 basehttp 40457 134120594478656 "GET / HTTP/1.1" 200 394
+INFO 2024-03-08 12:12:29,509 basehttp 40457 134120594478656 "GET / HTTP/1.1" 200 394
+INFO 2024-03-08 12:23:32,855 autoreload 41935 135359231438848 Watching for file changes with StatReloader
+INFO 2024-03-08 12:23:34,727 basehttp 41935 135359114507840 "GET / HTTP/1.1" 200 394
+INFO 2024-03-08 12:23:40,895 autoreload 42008 126391541321728 Watching for file changes with StatReloader
+INFO 2024-03-08 12:24:26,640 autoreload 42057 133670054735872 Watching for file changes with StatReloader
+INFO 2024-03-08 12:26:14,325 basehttp 42057 133669771535936 "GET /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 12:29:50,346 autoreload 42965 130724682821632 Watching for file changes with StatReloader
+INFO 2024-03-08 12:29:55,530 basehttp 42965 130724633155136 "GET /orders-by-client-id/ HTTP/1.1" 200 438
+ERROR 2024-03-08 12:29:57,347 log 42965 130724633155136 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 32, in orders_by_client_id
+    print(request.REQUEST.values())
+AttributeError: 'WSGIRequest' object has no attribute 'REQUEST'
+ERROR 2024-03-08 12:29:57,347 basehttp 42965 130724633155136 "POST /orders-by-client-id/ HTTP/1.1" 500 71437
+INFO 2024-03-08 12:30:13,611 autoreload 43011 123265005891584 Watching for file changes with StatReloader
+INFO 2024-03-08 12:30:25,810 autoreload 43011 123265005891584 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 12:30:26,039 autoreload 43024 125352161271808 Watching for file changes with StatReloader
+INFO 2024-03-08 12:30:27,647 basehttp 43024 125352043083328 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 12:30:29,180 basehttp 43024 125352043083328 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 12:30:58,477 autoreload 43024 125352161271808 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 12:30:58,708 autoreload 43048 137619271118848 Watching for file changes with StatReloader
+INFO 2024-03-08 12:31:01,112 basehttp 43048 137619221419584 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 12:40:37,875 autoreload 43048 137619271118848 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 12:40:38,090 autoreload 43499 124161826541568 Watching for file changes with StatReloader
+INFO 2024-03-08 12:40:56,376 autoreload 43499 124161826541568 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 12:40:56,600 autoreload 43508 131570132545536 Watching for file changes with StatReloader
+INFO 2024-03-08 12:41:17,793 autoreload 43508 131570132545536 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 12:41:18,015 autoreload 43523 135070403035136 Watching for file changes with StatReloader
+INFO 2024-03-08 12:52:28,845 autoreload 43910 134788579287040 Watching for file changes with StatReloader
+INFO 2024-03-08 12:55:21,323 autoreload 43910 134788579287040 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-08 12:55:21,536 autoreload 44048 127191410745344 Watching for file changes with StatReloader
+INFO 2024-03-08 12:55:42,830 autoreload 44048 127191410745344 /home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/views/generic/edit.py changed, reloading.
+INFO 2024-03-08 12:55:43,237 autoreload 44178 136878526603264 Watching for file changes with StatReloader
+INFO 2024-03-08 12:57:50,008 autoreload 44262 123391336988672 Watching for file changes with StatReloader
+INFO 2024-03-08 12:57:51,434 basehttp 44262 123391287375424 "GET / HTTP/1.1" 200 394
+INFO 2024-03-08 14:09:31,375 basehttp 44262 123391287375424 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 14:09:49,545 autoreload 44262 123391336988672 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:09:49,777 autoreload 45000 133478559162368 Watching for file changes with StatReloader
+ERROR 2024-03-08 14:09:50,609 log 45000 133478509450816 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 36, in orders_by_client_id
+    print(form.name)
+AttributeError: 'ClientForm' object has no attribute 'name'
+ERROR 2024-03-08 14:09:50,610 basehttp 45000 133478509450816 "POST /orders-by-client-id/ HTTP/1.1" 500 71602
+INFO 2024-03-08 14:10:25,155 autoreload 45000 133478559162368 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:10:25,376 autoreload 45024 128210144067584 Watching for file changes with StatReloader
+INFO 2024-03-08 14:10:26,962 basehttp 45024 128210094429760 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 14:11:02,090 basehttp 45024 128210094429760 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 14:11:18,006 autoreload 45024 128210144067584 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:11:18,234 autoreload 45069 130456674033664 Watching for file changes with StatReloader
+INFO 2024-03-08 14:11:20,013 basehttp 45069 130456624383552 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 14:11:35,543 autoreload 45069 130456674033664 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:11:35,788 autoreload 45080 123496526675968 Watching for file changes with StatReloader
+INFO 2024-03-08 14:11:37,267 basehttp 45080 123496476972608 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 14:11:58,135 autoreload 45080 123496526675968 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:11:58,351 autoreload 45107 124985246621696 Watching for file changes with StatReloader
+ERROR 2024-03-08 14:12:00,046 log 45107 124985196942912 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 36, in orders_by_client_id
+    print(form.fields.get('name').text)
+AttributeError: 'CharField' object has no attribute 'text'
+ERROR 2024-03-08 14:12:00,046 basehttp 45107 124985196942912 "POST /orders-by-client-id/ HTTP/1.1" 500 71656
+INFO 2024-03-08 14:12:28,774 autoreload 45107 124985246621696 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:12:29,006 autoreload 45130 128860259573760 Watching for file changes with StatReloader
+INFO 2024-03-08 14:12:36,086 basehttp 45130 128860209952320 "POST /orders-by-client-id/ HTTP/1.1" 200 438
+INFO 2024-03-08 14:15:20,685 autoreload 45130 128860259573760 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:15:20,912 autoreload 45235 134213998235648 Watching for file changes with StatReloader
+INFO 2024-03-08 14:16:13,409 basehttp 45235 134213948421696 "POST /orders-by-client-id/ HTTP/1.1" 200 674
+INFO 2024-03-08 14:16:20,795 basehttp 45235 134213948421696 "POST /orders-by-client-id/ HTTP/1.1" 200 592
+INFO 2024-03-08 14:16:51,879 autoreload 45235 134213998235648 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:16:52,103 autoreload 45279 132029626703872 Watching for file changes with StatReloader
+INFO 2024-03-08 14:16:54,113 basehttp 45279 132029509269056 "POST /orders-by-client-id/ HTTP/1.1" 200 593
+INFO 2024-03-08 14:17:01,338 autoreload 45279 132029626703872 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:17:01,550 autoreload 45310 139310306291712 Watching for file changes with StatReloader
+ERROR 2024-03-08 14:17:02,103 log 45310 139310256555584 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 36, in orders_by_client_id
+    print(form.name)
+AttributeError: 'ClientForm' object has no attribute 'name'
+ERROR 2024-03-08 14:17:02,104 basehttp 45310 139310256555584 "POST /orders-by-client-id/ HTTP/1.1" 500 71605
+INFO 2024-03-08 14:17:17,803 autoreload 45310 139310306291712 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:17:18,034 autoreload 45325 130054230450176 Watching for file changes with StatReloader
+INFO 2024-03-08 14:17:18,737 basehttp 45325 130054180738624 "POST /orders-by-client-id/ HTTP/1.1" 200 593
+INFO 2024-03-08 14:17:20,937 basehttp 45325 130054180738624 "POST /orders-by-client-id/ HTTP/1.1" 200 594
+INFO 2024-03-08 14:22:12,724 autoreload 45325 130054230450176 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:22:12,948 autoreload 45531 139525589553152 Watching for file changes with StatReloader
+INFO 2024-03-08 14:33:18,273 autoreload 45531 139525589553152 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:33:18,541 autoreload 46814 125066329718784 Watching for file changes with StatReloader
+INFO 2024-03-08 14:33:42,336 basehttp 46814 125066280080960 "GET / HTTP/1.1" 200 394
+WARNING 2024-03-08 14:33:42,417 log 46814 125066280080960 Not Found: /favicon.ico
+WARNING 2024-03-08 14:33:42,417 basehttp 46814 125066280080960 "GET /favicon.ico HTTP/1.1" 404 2621
+ERROR 2024-03-08 14:33:51,215 log 46814 125066280080960 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 40, in orders_by_client_id
+    return render(request, 'myapp/orders_of_client.html', {'form': form, 'orders':orders})
+UnboundLocalError: local variable 'orders' referenced before assignment
+ERROR 2024-03-08 14:33:51,216 basehttp 46814 125066280080960 "GET /orders-by-client-id/ HTTP/1.1" 500 70684
+INFO 2024-03-08 14:34:24,297 autoreload 46906 133673089576960 Watching for file changes with StatReloader
+INFO 2024-03-08 14:34:49,619 autoreload 46906 133673089576960 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:34:49,848 autoreload 46918 124947497357312 Watching for file changes with StatReloader
+INFO 2024-03-08 14:34:50,486 basehttp 46918 124947376633408 "GET /orders-by-client-id/ HTTP/1.1" 200 581
+INFO 2024-03-08 14:36:34,544 basehttp 46918 124947376633408 "POST /orders-by-client-id/ HTTP/1.1" 200 623
+INFO 2024-03-08 14:37:00,149 basehttp 46918 124947376633408 "POST /orders-by-client-id/ HTTP/1.1" 200 384
+INFO 2024-03-08 14:37:42,424 autoreload 46918 124947497357312 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:37:42,659 autoreload 47035 130080954859520 Watching for file changes with StatReloader
+ERROR 2024-03-08 14:37:44,159 log 47035 130080905164352 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 40, in orders_by_client_id
+    orders = Order.objects.filter(client=client).order_by(-'order_date').all()
+TypeError: bad operand type for unary -: 'str'
+ERROR 2024-03-08 14:37:44,160 basehttp 47035 130080905164352 "POST /orders-by-client-id/ HTTP/1.1" 500 72124
+INFO 2024-03-08 14:38:03,969 autoreload 47035 130080954859520 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:38:04,188 autoreload 47060 138799394422784 Watching for file changes with StatReloader
+INFO 2024-03-08 14:38:05,220 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 384
+INFO 2024-03-08 14:38:09,370 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 384
+INFO 2024-03-08 14:39:09,061 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 384
+INFO 2024-03-08 14:39:43,723 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 319
+INFO 2024-03-08 14:40:04,776 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 213
+INFO 2024-03-08 14:40:27,628 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 213
+INFO 2024-03-08 14:40:30,253 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 213
+INFO 2024-03-08 14:40:41,523 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 384
+INFO 2024-03-08 14:40:57,168 basehttp 47060 138799344784960 "POST /orders-by-client-id/ HTTP/1.1" 200 384
+INFO 2024-03-08 14:41:38,047 autoreload 47060 138799394422784 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 14:41:38,281 autoreload 47162 135957689393152 Watching for file changes with StatReloader
+INFO 2024-03-08 14:41:39,574 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 319
+INFO 2024-03-08 15:14:05,406 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 776
+INFO 2024-03-08 15:14:56,523 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 772
+INFO 2024-03-08 15:15:10,192 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 772
+INFO 2024-03-08 15:15:55,325 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 185
+INFO 2024-03-08 15:16:11,280 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 185
+INFO 2024-03-08 15:16:15,875 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 185
+INFO 2024-03-08 15:16:31,143 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 741
+INFO 2024-03-08 15:16:45,465 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 288
+INFO 2024-03-08 15:17:03,239 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:04,995 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:05,372 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:06,285 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:06,662 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:07,088 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:07,555 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:07,881 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:17:08,312 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 857
+INFO 2024-03-08 15:18:10,105 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 823
+INFO 2024-03-08 15:24:13,517 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 767
+INFO 2024-03-08 15:24:15,169 basehttp 47162 135957639763520 "POST /orders-by-client-id/ HTTP/1.1" 200 767
+INFO 2024-03-08 15:33:40,445 autoreload 47162 135957689393152 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:33:40,671 autoreload 48241 128517015191552 Watching for file changes with StatReloader
+INFO 2024-03-08 15:33:41,782 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:34:14,051 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:34:14,616 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:34:15,079 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:34:15,415 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:34:15,715 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:34:56,020 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 975
+INFO 2024-03-08 15:37:43,192 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 1252
+INFO 2024-03-08 15:38:11,483 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 1237
+INFO 2024-03-08 15:38:50,128 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 1814
+INFO 2024-03-08 15:38:57,567 basehttp 48241 128516897109568 "POST /orders-by-client-id/ HTTP/1.1" 200 1814
+WARNING 2024-03-08 15:38:57,902 log 48241 128516897109568 Not Found: /favicon.ico
+WARNING 2024-03-08 15:38:57,902 basehttp 48241 128516897109568 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-08 15:39:02,324 autoreload 48367 135693164994560 Watching for file changes with StatReloader
+INFO 2024-03-08 15:39:06,610 basehttp 48367 135693047166528 "GET /orders-by-client-id/ HTTP/1.1" 200 1139
+INFO 2024-03-08 15:39:10,466 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1815
+INFO 2024-03-08 15:39:49,869 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1815
+INFO 2024-03-08 15:39:53,095 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1815
+WARNING 2024-03-08 15:39:53,486 log 48367 135693047166528 Not Found: /favicon.ico
+WARNING 2024-03-08 15:39:53,487 basehttp 48367 135693047166528 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-08 15:39:54,249 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1815
+INFO 2024-03-08 15:39:56,971 basehttp 48367 135693047166528 "GET /orders-by-client-id/ HTTP/1.1" 200 1139
+WARNING 2024-03-08 15:39:57,555 log 48367 135693047166528 Not Found: /orders-by-client-i
+WARNING 2024-03-08 15:39:57,556 basehttp 48367 135693047166528 "GET /orders-by-client-i HTTP/1.1" 404 2642
+WARNING 2024-03-08 15:40:00,375 log 48367 135693047166528 Not Found: /orders-by-client-iв
+WARNING 2024-03-08 15:40:00,375 basehttp 48367 135693047166528 "GET /orders-by-client-i%D0%B2 HTTP/1.1" 404 2652
+INFO 2024-03-08 15:40:05,096 basehttp 48367 135693047166528 "GET /orders-by-client-id/ HTTP/1.1" 200 1139
+INFO 2024-03-08 15:40:11,345 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1814
+INFO 2024-03-08 15:42:10,699 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:14,828 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:15,320 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:15,764 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:17,408 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:17,684 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:18,320 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:18,956 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:42:24,063 basehttp 48367 135693047166528 "POST /orders-by-client-id/ HTTP/1.1" 200 1832
+INFO 2024-03-08 15:43:21,523 autoreload 48367 135693164994560 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:43:21,738 autoreload 48660 138024408637440 Watching for file changes with StatReloader
+INFO 2024-03-08 15:43:22,391 basehttp 48660 138024359040576 "POST /orders-by-client-id/ HTTP/1.1" 200 1833
+INFO 2024-03-08 15:43:25,118 basehttp 48660 138024359040576 "POST /orders-by-client-id/ HTTP/1.1" 200 1833
+INFO 2024-03-08 15:43:36,503 basehttp 48660 138024359040576 "POST /orders-by-client-id/ HTTP/1.1" 200 1833
+INFO 2024-03-08 15:43:39,889 basehttp 48660 138024359040576 "POST /orders-by-client-id/ HTTP/1.1" 200 1851
+INFO 2024-03-08 15:43:51,125 basehttp 48660 138024359040576 "POST /orders-by-client-id/ HTTP/1.1" 200 1833
+INFO 2024-03-08 15:44:02,157 autoreload 48660 138024408637440 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:44:02,368 autoreload 48705 132492840497152 Watching for file changes with StatReloader
+INFO 2024-03-08 15:45:47,385 autoreload 48705 132492840497152 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:45:47,588 autoreload 48770 137723267977216 Watching for file changes with StatReloader
+INFO 2024-03-08 15:46:35,663 basehttp 48770 137723218314816 "POST /orders-by-client-id/ HTTP/1.1" 200 2175
+INFO 2024-03-08 15:47:52,130 basehttp 48770 137723218314816 "POST /orders-by-client-id/ HTTP/1.1" 200 2177
+INFO 2024-03-08 15:52:27,448 basehttp 48770 137723218314816 "POST /orders-by-client-id/ HTTP/1.1" 200 2177
+INFO 2024-03-08 15:54:25,384 autoreload 48770 137723267977216 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:54:25,610 autoreload 48897 126737180553216 Watching for file changes with StatReloader
+INFO 2024-03-08 15:55:12,117 autoreload 48897 126737180553216 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-08 15:55:12,322 autoreload 48924 123846699139072 Watching for file changes with StatReloader
+INFO 2024-03-08 15:58:02,886 autoreload 48924 123846699139072 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-08 15:58:03,115 autoreload 48984 135968998367232 Watching for file changes with StatReloader
+INFO 2024-03-08 15:59:05,728 autoreload 48984 135968998367232 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:59:05,957 autoreload 49010 133326117629952 Watching for file changes with StatReloader
+INFO 2024-03-08 15:59:24,235 autoreload 49010 133326117629952 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 15:59:24,457 autoreload 49023 125404700352512 Watching for file changes with StatReloader
+INFO 2024-03-08 16:00:19,048 autoreload 49023 125404700352512 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:00:19,274 autoreload 49043 125595058331648 Watching for file changes with StatReloader
+INFO 2024-03-08 16:00:49,652 autoreload 49043 125595058331648 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:00:49,861 autoreload 49054 124971611455488 Watching for file changes with StatReloader
+ERROR 2024-03-08 16:00:51,331 log 49054 124971561715264 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 39, in orders_by_client_id
+    start_date = get_start_date(form.name)
+AttributeError: 'ClientForm' object has no attribute 'name'
+ERROR 2024-03-08 16:00:51,332 basehttp 49054 124971561715264 "POST /orders-by-client-id/ HTTP/1.1" 500 72771
+INFO 2024-03-08 16:01:40,444 autoreload 49054 124971611455488 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:01:40,682 autoreload 49084 123464815390720 Watching for file changes with StatReloader
+INFO 2024-03-08 16:01:42,642 basehttp 49084 123464765752896 "POST /orders-by-client-id/ HTTP/1.1" 200 1156
+INFO 2024-03-08 16:01:44,057 basehttp 49084 123464765752896 "POST /orders-by-client-id/ HTTP/1.1" 200 1156
+INFO 2024-03-08 16:02:40,345 autoreload 49084 123464815390720 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:02:40,573 autoreload 49118 131249361874944 Watching for file changes with StatReloader
+ERROR 2024-03-08 16:02:41,733 log 49118 131249312273984 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 39, in orders_by_client_id
+    print(form.period)
+AttributeError: 'ClientForm' object has no attribute 'period'
+ERROR 2024-03-08 16:02:41,734 basehttp 49118 131249312273984 "POST /orders-by-client-id/ HTTP/1.1" 500 72746
+INFO 2024-03-08 16:03:20,120 autoreload 49118 131249361874944 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:03:20,331 autoreload 49154 140553085235200 Watching for file changes with StatReloader
+INFO 2024-03-08 16:03:21,117 basehttp 49154 140553035617856 "POST /orders-by-client-id/ HTTP/1.1" 200 1156
+INFO 2024-03-08 16:03:21,478 basehttp 49154 140553035617856 "POST /orders-by-client-id/ HTTP/1.1" 200 1156
+INFO 2024-03-08 16:05:28,589 autoreload 49154 140553085235200 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:05:28,817 autoreload 49204 123884251787264 Watching for file changes with StatReloader
+INFO 2024-03-08 16:05:59,198 autoreload 49204 123884251787264 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:05:59,436 autoreload 49220 134214330228736 Watching for file changes with StatReloader
+INFO 2024-03-08 16:06:02,433 basehttp 49220 134214280549952 "POST /orders-by-client-id/ HTTP/1.1" 200 1156
+INFO 2024-03-08 16:06:41,958 autoreload 49220 134214330228736 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:06:42,188 autoreload 49250 126978160418816 Watching for file changes with StatReloader
+INFO 2024-03-08 16:06:43,332 basehttp 49250 126978110690880 "POST /orders-by-client-id/ HTTP/1.1" 200 2162
+INFO 2024-03-08 16:06:45,081 basehttp 49250 126978110690880 "POST /orders-by-client-id/ HTTP/1.1" 200 2162
+INFO 2024-03-08 16:06:45,592 basehttp 49250 126978110690880 "POST /orders-by-client-id/ HTTP/1.1" 200 2162
+INFO 2024-03-08 16:06:46,121 basehttp 49250 126978110690880 "POST /orders-by-client-id/ HTTP/1.1" 200 2162
+INFO 2024-03-08 16:07:31,802 autoreload 49250 126978160418816 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-08 16:07:32,027 autoreload 49280 123916959539200 Watching for file changes with StatReloader
+INFO 2024-03-08 16:11:55,232 basehttp 49280 123916909811264 "POST /orders-by-client-id/ HTTP/1.1" 200 1944

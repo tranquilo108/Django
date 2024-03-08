@@ -9,5 +9,8 @@ class Command(BaseCommand):
         clients = Client.objects.all()
         for client in clients:
             self.stdout.write(
-                f'Client: {client.name}, Email: {client.email}, Phone: {client.phone_number}, Address: {client.address}')
+                f'Client: {client.name}, '
+                f'Email: {client.email}, '
+                f'Phone: {client.phone_number}, '
+                f'Address: {client.address}')
         
