@@ -3,8 +3,8 @@ from django.utils import timezone
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from myapp.forms import ClientForm
-from myapp.models import Client, Order
+from myapp.forms import ClientForm, ProductForm
+from myapp.models import Client, Order, Product
 
 
 # Create your views here.
@@ -45,11 +45,13 @@ def orders_by_client_id(request):
                     'products')
                 for order in orders:
                     product_info = ', '.join([product.name for product in order.products.all()])
+                    print(product_info)
                     orders_list.append({'order_id': order.id,
                                         'client': order.client.name,
                                         'products': product_info,
                                         'total_amount': order.total_amount,
-                                        'order_date': order.order_date})
+                                        'order_date': order.order_date,
+                                        })
     return render(request, 'myapp/orders_of_client.html', {'form': form, 'orders': orders_list})
 
 
@@ -63,3 +65,22 @@ def get_start_date(period):
         return today - timedelta(days=365)
     else:
         return today
+
+
+def update_products(request):
+    if request.method == "POST":
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            product = Product.objects.filter(id=form.data.get('id')).first()
+            if product is not None:
+                product.name = form.data.get('name')
+                product.description = form.data.get('description')
+                product.price = form.data.get('price')
+                product.quantity = form.data.get('quantity')
+                product.image = form.data.get('image')
+                product.save()
+                return HttpResponse("Продукт успешно обновлен")
+    form = ProductForm()
+    return render(request, 'myapp/update_products.html', {'form': form})
+
+

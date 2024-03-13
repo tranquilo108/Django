@@ -491,3 +491,270 @@ INFO 2024-03-08 16:06:46,121 basehttp 49250 126978110690880 "POST /orders-by-cli
 INFO 2024-03-08 16:07:31,802 autoreload 49250 126978160418816 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
 INFO 2024-03-08 16:07:32,027 autoreload 49280 123916959539200 Watching for file changes with StatReloader
 INFO 2024-03-08 16:11:55,232 basehttp 49280 123916909811264 "POST /orders-by-client-id/ HTTP/1.1" 200 1944
+INFO 2024-03-13 11:26:58,965 autoreload 54199 126820030742528 Watching for file changes with StatReloader
+INFO 2024-03-13 11:27:07,909 basehttp 54199 126819913168448 "GET / HTTP/1.1" 200 394
+INFO 2024-03-13 11:27:34,653 basehttp 54199 126819913168448 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+INFO 2024-03-13 11:27:39,319 basehttp 54199 126819913168448 "POST /orders-by-client-id/ HTTP/1.1" 200 1944
+INFO 2024-03-13 11:37:35,898 autoreload 54811 136229482020864 Watching for file changes with StatReloader
+INFO 2024-03-13 11:37:38,329 basehttp 54811 136229426296384 "GET / HTTP/1.1" 200 394
+INFO 2024-03-13 11:37:41,863 basehttp 54811 136229426296384 "GET /orders-by-client-id/ HTTP/1.1" 200 1278
+INFO 2024-03-13 11:38:03,302 autoreload 54811 136229482020864 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-13 11:38:03,528 autoreload 54852 123641662533632 Watching for file changes with StatReloader
+INFO 2024-03-13 11:38:04,899 basehttp 54852 123641606960704 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+ERROR 2024-03-13 11:38:09,021 log 54852 123641606960704 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 53, in orders_by_client_id
+    'image': order.image})
+AttributeError: 'Order' object has no attribute 'image'
+ERROR 2024-03-13 11:38:09,021 basehttp 54852 123641606960704 "POST /orders-by-client-id/ HTTP/1.1" 500 74306
+INFO 2024-03-13 11:39:28,432 autoreload 54852 123641662533632 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:39:28,642 autoreload 54906 140651350609920 Watching for file changes with StatReloader
+INFO 2024-03-13 11:39:29,906 basehttp 54906 140651295405632 "POST /orders-by-client-id/ HTTP/1.1" 200 1944
+INFO 2024-03-13 11:40:51,557 autoreload 54906 140651350609920 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:40:51,782 autoreload 54943 136676228694016 Watching for file changes with StatReloader
+ERROR 2024-03-13 11:40:53,854 log 54943 136676173149760 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image.url for product in order.products.all()])
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in <listcomp>
+    product_image = ', '.join([product.image.url for product in order.products.all()])
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR 2024-03-13 11:40:53,854 basehttp 54943 136676173149760 "POST /orders-by-client-id/ HTTP/1.1" 500 86127
+INFO 2024-03-13 11:41:11,113 autoreload 54943 136676228694016 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:41:11,342 autoreload 54969 134358187524096 Watching for file changes with StatReloader
+ERROR 2024-03-13 11:41:12,956 log 54969 134358132323904 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:41:12,957 basehttp 54969 134358132323904 "POST /orders-by-client-id/ HTTP/1.1" 500 74534
+ERROR 2024-03-13 11:41:14,836 log 54969 134358132323904 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:41:14,837 basehttp 54969 134358132323904 "POST /orders-by-client-id/ HTTP/1.1" 500 74535
+INFO 2024-03-13 11:42:25,539 autoreload 54987 139368899588096 Watching for file changes with StatReloader
+ERROR 2024-03-13 11:42:32,081 log 54987 139368843966016 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:42:32,081 basehttp 54987 139368843966016 "POST /orders-by-client-id/ HTTP/1.1" 500 74621
+WARNING 2024-03-13 11:42:32,151 log 54987 139368843966016 Not Found: /favicon.ico
+WARNING 2024-03-13 11:42:32,152 basehttp 54987 139368843966016 "GET /favicon.ico HTTP/1.1" 404 2621
+INFO 2024-03-13 11:42:33,372 basehttp 54987 139368843966016 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+ERROR 2024-03-13 11:42:34,418 log 54987 139368843966016 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:42:34,419 basehttp 54987 139368843966016 "POST /orders-by-client-id/ HTTP/1.1" 500 74493
+INFO 2024-03-13 11:42:51,533 basehttp 54987 139368843966016 "GET / HTTP/1.1" 200 394
+INFO 2024-03-13 11:42:58,723 basehttp 54987 139368843966016 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+ERROR 2024-03-13 11:43:02,101 log 54987 139368843966016 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:43:02,102 basehttp 54987 139368843966016 "POST /orders-by-client-id/ HTTP/1.1" 500 74496
+INFO 2024-03-13 11:45:24,296 basehttp 54987 139368843966016 "GET / HTTP/1.1" 200 394
+INFO 2024-03-13 11:45:40,196 basehttp 54987 139368843966016 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+ERROR 2024-03-13 11:45:43,630 log 54987 139368843966016 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:45:43,631 basehttp 54987 139368843966016 "POST /orders-by-client-id/ HTTP/1.1" 500 74493
+INFO 2024-03-13 11:46:38,691 autoreload 55309 130409779068928 Watching for file changes with StatReloader
+INFO 2024-03-13 11:46:42,657 basehttp 55309 130409723590208 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+ERROR 2024-03-13 11:46:44,840 log 55309 130409723590208 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:46:44,840 basehttp 55309 130409723590208 "POST /orders-by-client-id/ HTTP/1.1" 500 74493
+INFO 2024-03-13 11:47:33,417 autoreload 55309 130409779068928 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:47:33,657 autoreload 55358 129043691118592 Watching for file changes with StatReloader
+ERROR 2024-03-13 11:47:34,576 log 55358 129043567474240 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 48, in orders_by_client_id
+    product_image = ', '.join([product.image for product in order.products.all()])
+TypeError: sequence item 0: expected str instance, ImageFieldFile found
+ERROR 2024-03-13 11:47:34,576 basehttp 55358 129043567474240 "POST /orders-by-client-id/ HTTP/1.1" 500 74498
+INFO 2024-03-13 11:49:47,849 autoreload 55358 129043691118592 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:49:48,066 autoreload 55407 132316537618432 Watching for file changes with StatReloader
+INFO 2024-03-13 11:49:49,017 basehttp 55407 132316482500160 "POST /orders-by-client-id/ HTTP/1.1" 200 1944
+INFO 2024-03-13 11:50:42,627 autoreload 55407 132316537618432 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:50:42,854 autoreload 55431 136297453096960 Watching for file changes with StatReloader
+ERROR 2024-03-13 11:50:44,458 log 55431 136297397089856 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 47, in orders_by_client_id
+    product_info = ', '.join([product.name for product in order])
+TypeError: 'Order' object is not iterable
+ERROR 2024-03-13 11:50:44,459 basehttp 55431 136297397089856 "POST /orders-by-client-id/ HTTP/1.1" 500 74110
+INFO 2024-03-13 11:50:45,495 basehttp 55431 136297397089856 "GET /orders-by-client-id/ HTTP/1.1" 200 1142
+ERROR 2024-03-13 11:50:46,205 log 55431 136297397089856 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 47, in orders_by_client_id
+    product_info = ', '.join([product.name for product in order])
+TypeError: 'Order' object is not iterable
+ERROR 2024-03-13 11:50:46,206 basehttp 55431 136297397089856 "POST /orders-by-client-id/ HTTP/1.1" 500 74110
+INFO 2024-03-13 11:50:57,195 autoreload 55431 136297453096960 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:50:57,426 autoreload 55455 128054913101824 Watching for file changes with StatReloader
+INFO 2024-03-13 11:51:00,959 basehttp 55455 128054785472064 "POST /orders-by-client-id/ HTTP/1.1" 200 1944
+INFO 2024-03-13 11:51:10,242 basehttp 55455 128054785472064 "POST /orders-by-client-id/ HTTP/1.1" 200 1944
+INFO 2024-03-13 11:54:28,423 autoreload 55455 128054913101824 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 11:54:28,657 autoreload 55564 139099145666560 Watching for file changes with StatReloader
+ERROR 2024-03-13 11:54:30,564 log 55564 139099021243968 Internal Server Error: /orders-by-client-id/
+Traceback (most recent call last):
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py", line 47, in orders_by_client_id
+    products = Product.objects.filter(id=order.product_id).all()
+AttributeError: 'Order' object has no attribute 'product_id'
+ERROR 2024-03-13 11:54:30,564 basehttp 55564 139099021243968 "POST /orders-by-client-id/ HTTP/1.1" 500 74253
+INFO 2024-03-13 12:00:45,065 autoreload 55564 139099145666560 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 12:00:45,298 autoreload 55701 123433990852608 Watching for file changes with StatReloader
+INFO 2024-03-13 12:06:16,290 autoreload 55701 123433990852608 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 12:06:16,517 autoreload 55811 127586588135424 Watching for file changes with StatReloader
+INFO 2024-03-13 12:07:36,263 autoreload 55811 127586588135424 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/urls.py changed, reloading.
+INFO 2024-03-13 12:07:36,492 autoreload 55991 130280219385856 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:07:41,408 log 55991 130280163636800 Not Found: /update_products
+WARNING 2024-03-13 12:07:41,408 basehttp 55991 130280163636800 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:08:24,074 autoreload 56028 130480070049792 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:08:27,375 log 56028 130480014882368 Not Found: /update_products
+WARNING 2024-03-13 12:08:27,375 basehttp 56028 130480014882368 "GET /update_products HTTP/1.1" 404 2820
+WARNING 2024-03-13 12:08:33,590 log 56028 130480014882368 Not Found: /update_products
+WARNING 2024-03-13 12:08:33,591 basehttp 56028 130480014882368 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:08:38,289 autoreload 56113 139236734541824 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:08:40,263 log 56113 139236679349824 Not Found: /update_products
+WARNING 2024-03-13 12:08:40,263 basehttp 56113 139236679349824 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:08:51,442 autoreload 56171 140344139689984 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:08:55,953 log 56171 140344084657728 Not Found: /update_products
+WARNING 2024-03-13 12:08:55,954 basehttp 56171 140344084657728 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:09:10,093 autoreload 56271 127288761413632 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:09:14,500 log 56271 127288706332224 Not Found: /update_products
+WARNING 2024-03-13 12:09:14,500 basehttp 56271 127288706332224 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:09:45,796 autoreload 56402 132870521995264 Watching for file changes with StatReloader
+INFO 2024-03-13 12:09:57,588 autoreload 56471 135651628142592 Watching for file changes with StatReloader
+INFO 2024-03-13 12:09:59,809 basehttp 56471 135651504682560 "GET / HTTP/1.1" 200 394
+WARNING 2024-03-13 12:10:03,284 log 56471 135651504682560 Not Found: /update_products
+WARNING 2024-03-13 12:10:03,284 basehttp 56471 135651504682560 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:11:05,621 autoreload 56770 127276189036544 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:11:08,439 log 56770 127276133905984 Not Found: /update_products
+WARNING 2024-03-13 12:11:08,439 basehttp 56770 127276133905984 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:11:38,212 autoreload 57140 135745510211584 Watching for file changes with StatReloader
+INFO 2024-03-13 12:11:40,437 basehttp 57140 135745386837568 "GET / HTTP/1.1" 200 394
+WARNING 2024-03-13 12:11:47,059 log 57140 135745386837568 Not Found: /dice/
+WARNING 2024-03-13 12:11:47,060 basehttp 57140 135745386837568 "GET /dice/ HTTP/1.1" 404 2790
+INFO 2024-03-13 12:12:02,586 basehttp 57140 135745386837568 "GET /admin/goods/products/6/change/ HTTP/1.1" 302 0
+INFO 2024-03-13 12:12:02,601 basehttp 57140 135745386837568 "GET /admin/login/?next=/admin/goods/products/6/change/ HTTP/1.1" 200 4407
+INFO 2024-03-13 12:12:02,656 basehttp 57140 135745386837568 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:02,656 basehttp 57140 135745377396288 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:02,659 basehttp 57140 135745367955008 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:02,659 basehttp 57140 135745359562304 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:02,659 basehttp 57140 135745351169600 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:02,666 basehttp 57140 135745359562304 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:02,666 basehttp 57140 135745351169600 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-03-13 12:12:14,876 autoreload 57302 139146416230400 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:12:23,254 log 57302 139146361304640 Not Found: /update_products
+WARNING 2024-03-13 12:12:23,254 basehttp 57302 139146361304640 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:15:22,611 autoreload 57526 136505905303552 Watching for file changes with StatReloader
+INFO 2024-03-13 12:15:24,719 basehttp 57526 136505849804352 "GET / HTTP/1.1" 200 394
+WARNING 2024-03-13 12:15:28,236 log 57526 136505849804352 Not Found: /fdfd
+WARNING 2024-03-13 12:15:28,236 basehttp 57526 136505849804352 "GET /fdfd HTTP/1.1" 404 2787
+INFO 2024-03-13 12:15:39,555 autoreload 57599 131194422280192 Watching for file changes with StatReloader
+INFO 2024-03-13 12:15:58,654 autoreload 57621 138523684831232 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:16:03,226 log 57621 138523561686592 Not Found: /fdfd
+WARNING 2024-03-13 12:16:03,227 basehttp 57621 138523561686592 "GET /fdfd HTTP/1.1" 404 2787
+WARNING 2024-03-13 12:16:04,301 log 57621 138523561686592 Not Found: /fdfd
+WARNING 2024-03-13 12:16:04,301 basehttp 57621 138523561686592 "GET /fdfd HTTP/1.1" 404 2787
+WARNING 2024-03-13 12:16:04,619 log 57621 138523561686592 Not Found: /fdfd
+WARNING 2024-03-13 12:16:04,619 basehttp 57621 138523561686592 "GET /fdfd HTTP/1.1" 404 2787
+INFO 2024-03-13 12:17:08,166 autoreload 58087 131099242360832 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:17:12,616 log 58087 131099111978560 Not Found: /fdfd
+WARNING 2024-03-13 12:17:12,617 basehttp 58087 131099111978560 "GET /fdfd HTTP/1.1" 404 2787
+INFO 2024-03-13 12:17:48,636 autoreload 58191 134976032055296 Watching for file changes with StatReloader
+WARNING 2024-03-13 12:17:50,756 log 58191 134975976371776 Not Found: /fdfd
+WARNING 2024-03-13 12:17:50,756 basehttp 58191 134975976371776 "GET /fdfd HTTP/1.1" 404 2787
+INFO 2024-03-13 12:17:54,379 basehttp 58191 134975976371776 "GET / HTTP/1.1" 200 394
+INFO 2024-03-13 12:20:15,034 autoreload 58345 127951369478144 Watching for file changes with StatReloader
+INFO 2024-03-13 12:20:22,216 autoreload 58352 134718305697792 Watching for file changes with StatReloader
+INFO 2024-03-13 12:20:23,768 basehttp 58352 134718250022464 "GET / HTTP/1.1" 200 394
+WARNING 2024-03-13 12:20:34,281 log 58352 134718250022464 Not Found: /update_products
+WARNING 2024-03-13 12:20:34,281 basehttp 58352 134718250022464 "GET /update_products HTTP/1.1" 404 2820
+INFO 2024-03-13 12:20:37,293 basehttp 58352 134718250022464 "GET /update-products HTTP/1.1" 301 0
+INFO 2024-03-13 12:20:37,299 basehttp 58352 134718241629760 "GET /update-products/ HTTP/1.1" 200 644
+INFO 2024-03-13 12:22:06,244 autoreload 58352 134718305697792 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-13 12:22:06,475 autoreload 58468 127212486053888 Watching for file changes with StatReloader
+INFO 2024-03-13 12:22:07,463 basehttp 58468 127212363707968 "GET /update-products/ HTTP/1.1" 200 1392
+INFO 2024-03-13 12:23:20,752 basehttp 58468 127212363707968 "POST /update-products/ HTTP/1.1" 200 1392
+INFO 2024-03-13 12:23:56,580 autoreload 58468 127212486053888 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-13 12:23:56,824 autoreload 58612 135066396360704 Watching for file changes with StatReloader
+INFO 2024-03-13 12:24:54,478 autoreload 58612 135066396360704 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/forms.py changed, reloading.
+INFO 2024-03-13 12:24:54,710 autoreload 58638 128678011834368 Watching for file changes with StatReloader
+INFO 2024-03-13 12:24:56,299 basehttp 58638 128677887080000 "POST /update-products/ HTTP/1.1" 200 1518
+INFO 2024-03-13 12:26:22,800 basehttp 58638 128677887080000 "POST /update-products/ HTTP/1.1" 200 37
+INFO 2024-03-13 12:27:44,557 autoreload 58874 129124560179200 Watching for file changes with StatReloader
+INFO 2024-03-13 12:31:40,816 basehttp 58874 129124433655360 "POST /update-products/ HTTP/1.1" 200 37
+INFO 2024-03-13 12:31:59,425 basehttp 58874 129124433655360 "POST /update-products/ HTTP/1.1" 200 37
+INFO 2024-03-13 12:33:06,245 autoreload 58874 129124560179200 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 12:33:06,479 autoreload 59037 140647569154048 Watching for file changes with StatReloader
+INFO 2024-03-13 12:33:14,669 autoreload 59037 140647569154048 /home/tranquilo/PycharmProjects/GB/DjangoHW/myapp/views.py changed, reloading.
+INFO 2024-03-13 12:33:14,899 autoreload 59049 127552261767168 Watching for file changes with StatReloader
+INFO 2024-03-13 12:33:18,978 basehttp 59049 127552135886400 "POST /update-products/ HTTP/1.1" 200 46
