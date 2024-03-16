@@ -8,6 +8,9 @@ class Client(models.Model):
     address = models.TextField()
     registration_date = models.DateField(auto_now_add=True)
 
+    class Meta:
+        verbose_name_plural = "Клиенты"
+        verbose_name = "Клиент"
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
@@ -16,6 +19,10 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField()
     added_date = models.DateField(auto_now_add=True)
     image = models.ImageField(upload_to='images/', blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "Продукты"
+        verbose_name = "Продукт"
 
 
 class Order(models.Model):
@@ -26,3 +33,8 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order ID: {self.id}, Client: {self.client.name}, Total Amount: {self.total_amount}, Order Date: {self.order_date}"
+
+    class Meta:
+        verbose_name_plural = "Заказы"
+        verbose_name = "Заказ"
+
